@@ -30,16 +30,16 @@ export default function Register(){
         <main className="bg-white min-h-screen max-w-screen flex items-center justify-center">
             <div className="flex flex-col gap-4 shadow bg-gray-500 p-4 w-80">
                 <h1 className="font-semibold text-xl">Register</h1>
-                <input placeholder="name" className="border-2 border-blue-700 px-2 rounded h-9"
+                <input placeholder="name" className="text-black border-2 border-blue-700 px-2 rounded h-9"
                     value={name}
                     onChange={(e)=>setName(e.target.value)}
                 />
-                <input placeholder="email" className="border-2 border-blue-700 px-2 rounded h-9"
+                <input placeholder="email" className="text-black border-2 border-blue-700 px-2 rounded h-9"
                     value={email}
                     type="email"
                     onChange={e => setEmail(e.target.value)}
                     />
-                <input placeholder="password" className="border-2 border-blue-700 px-2 rounded h-9"
+                <input placeholder="password" className="text-black border-2 border-blue-700 px-2 rounded h-9"
                     value={password}
                     type="password"
                     onChange={e => setPassword(e.target.value)}
