@@ -28,7 +28,7 @@ export default function Register(){
 
     return(
         <main className="bg-white min-h-screen max-w-screen flex items-center justify-center">
-            <div className="flex flex-col gap-4 shadow bg-gray-100 p-4 w-80">
+            <div className="flex flex-col gap-4 shadow bg-gray-500 p-4 w-80">
                 <h1 className="font-semibold text-xl">Register</h1>
                 <input placeholder="name" className="border-2 border-blue-700 px-2 rounded h-9"
                     value={name}
