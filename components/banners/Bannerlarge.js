@@ -5,8 +5,8 @@ export default function Bannerlarge(){
     return(
         <div className="container p-24 grid grid-cols-2">
             <div className="flex flex-col gap-4">
-                <h1 className="text-7xl font-semibold">Learn Without Limits</h1>
-                <p>With the correct leadership any organization will excel and that 
+                <h1 className="text-7xl font-semibold text-blue-700">Learn Without Limits</h1>
+                <p className="text-gray-800">With the correct leadership any organization will excel and that 
                 accordingly organizations should invest in the development and 
                 improvement of their leadership.</p>
                 <div className="flex gap-4">
@@ -19,7 +19,7 @@ export default function Bannerlarge(){
                 </div>
             </div>
              <div className="relative">
-                <Image src="/maxwell.png" fill alt="logo" />
+               
             </div>
         </div>
     )
