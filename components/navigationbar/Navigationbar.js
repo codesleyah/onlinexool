@@ -4,23 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { account} from "@/app/appwrite";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 
 
 export default function Navbarmain(){
 
-    const router = useRouter();
     const [loggedInUser, setLoggedInUser] = useState(null);
 
     const getUser = async () => {
         setLoggedInUser(await account.get());
     };
 
-
-
     useEffect(()=>{
         getUser()
-    });
+    },[]);
 
     return(
         <div className="absolute sticky top-0 w-full bg-white h-16 p-4 shadow border-b">
@@ -33,7 +29,6 @@ export default function Navbarmain(){
                 </div>
                 <div className="flex gap-4 items-center">
 
-                    
                     {!loggedInUser?(
                         <div className="flex gap-4 items-center">
                         <Link href={"/pages/auth/login"} className="text-blue-700 hover:underline">
@@ -44,14 +39,14 @@ export default function Navbarmain(){
                         </Link>
                     </div>
                     ) : (
-                       <div className="flex gap-4 items-center">
-                            <Link href={"/pages/courses/allcourses"} className="hover:underline text-blue-700">
-                                All Courses
-                            </Link>
-                            <Link href={"/pages/dashboard"} className="bg-blue-700 p-2   text-white rounded font-semibold h-9">
-                                {loggedInUser.name}  
-                            </Link>
-                       </div>
+                      <div className="flex gap-4 items-center">   
+                        <Link href={"/pages/courses/allcourses"} className="hover:underline text-blue-700">
+                            All Courses
+                        </Link>
+                        <Link href={"/pages/dashboard"} className="bg-blue-700 p-2   text-white rounded font-semibold h-9">
+                            {loggedInUser.name}
+                        </Link>
+                      </div>
                     )}
                 </div>
             </div>
