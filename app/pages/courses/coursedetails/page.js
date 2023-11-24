@@ -68,7 +68,7 @@ export default function Coursedetails(){
                                     {course? course.coursedescription: ""} 
                                 </p>
                                 <Link href={"/pages/courses/playcourse"}>
-                                    <button className="rounded w-full flex items-center justify-center gap-4 border border-blue-700 p-2">
+                                    <button className="rounded w-full flex items-center justify-center gap-4 border text-blue-700 border-blue-700 p-2">
                                     <PlayIcon height={25} width={25}/> Start Learnining
                                 </button>
                                 </Link>
